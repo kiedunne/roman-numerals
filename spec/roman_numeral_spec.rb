@@ -1,7 +1,6 @@
-require 'roman_numerals'
+require 'roman_numeral'
 
-describe RomanNumerals do
-
+describe RomanNumeral do
   let(:subject) { described_class.new }
 
   describe '#calculate' do
