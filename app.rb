@@ -14,15 +14,16 @@ class Converter < Sinatra::Base
   end
 
   post '/enter_number' do
-    @enter_num = session[:enter_num]
-    redirect '/reuslt'
+    session[:enter_num] = params[:enter_num]
+    # $numeral = RomanNumeral.new(params[:enter_num])
+    redirect '/result'
   end
 
   get '/result' do
-    @enter_num
+    @numeral = session[:enter_num]
+    # @numeral = $numeral.entered_num
     erb(:result)
   end
-
 
   run! if app_file == $0
 end

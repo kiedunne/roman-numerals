@@ -8,9 +8,14 @@
   </head>
 
   <body>
-    <h1 class="enter-number">Here's your roman numeral.</h1>
-      <h2><%=@entered_num.calculate.new_number%>/h2>
-      <form action='/result' method='get'>
+    <h1 class="enter-number">This is the number you entered.</h1>
+    <br>
+      <%=@numeral%>
+    <br>
+      <h1 class="enter-number">Here's your roman numeral.</h1>
+    <br>
+      <%=@numeral%>
+    <form action='/result' method='get'>
           <input type="submit" value="Convert another number">
 
   </body>

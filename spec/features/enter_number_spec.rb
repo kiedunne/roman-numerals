@@ -4,6 +4,6 @@ feature 'Test number entry' do
     visit('/')
     fill_in :enter_num, with: 3
     click_on "Convert"
-    expect(page).to have_content "III"
+    expect(page).to have_content "3"
   end
 end
