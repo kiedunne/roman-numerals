@@ -11,6 +11,13 @@ attr_reader :roman_num
     4 => 'IV',
     1 => 'I'
   }
+  def self.create
+    @rm =  RomanNumeral.new
+  end
+
+  def self.instance
+    @rm
+  end
 
   def initialize
     @roman_num = []
