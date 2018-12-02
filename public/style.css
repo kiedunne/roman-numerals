@@ -1,7 +1,14 @@
 
 .enter-number {
   font-family: 'Arial';
-  font-size: 50px;
+  font-size: 30px;
   font-weight: bold;
   color: blue;
+}
+
+div.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }

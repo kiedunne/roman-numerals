@@ -10,18 +10,23 @@ class Converter < Sinatra::Base
   set :sessions_secret, 'My session secret'
 
   get '/' do
+    @enter_num = session[:enter_num]
     erb(:index)
   end
 
   post '/enter_number' do
     session[:enter_num] = params[:enter_num]
-    # $numeral = RomanNumeral.new(params[:enter_num])
+    @numeral = RomanNumeral.new
+    $roman_numeral = @numeral.calculate(params[:enter_num])
+    p $roman_numeral
     redirect '/result'
   end
 
   get '/result' do
-    @numeral = session[:enter_num]
-    # @numeral = $numeral.entered_num
+    @enter_num = session[:enter_num]
+    # @numeral = RomanNumeral.new
+    # @roman_numeral = @numeral.calculate(params[:enter_num])
+    # p @roman_numeral
     erb(:result)
   end
 

@@ -1,4 +1,4 @@
-require 'roman_numeral'
+require_relative '../lib/roman_numeral.rb'
 
 describe RomanNumeral do
   let(:subject) { described_class.new }
@@ -27,5 +27,4 @@ describe RomanNumeral do
       expect(subject.calculate(4)).to eq 'IV'
     end
   end
-
 end

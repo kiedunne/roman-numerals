@@ -8,15 +8,22 @@
   </head>
 
   <body>
-    <h1 class="enter-number">This is the number you entered.</h1>
-    <br>
-      <%=@numeral%>
-    <br>
-      <h1 class="enter-number">Here's your roman numeral.</h1>
-    <br>
-      <%=@numeral%>
-    <form action='/result' method='get'>
-          <input type="submit" value="Convert another number">
-
+    <div class='content'>
+      <div class='user_num_div'>
+        <h1 class="enter-number">This is the number you entered.</h1>
+        <h1><%=@enter_num%></h1>
+      </div>
+      <div class='roman_num_div'>
+          <h1 class="enter-number">Here's your roman numeral.</h1>
+          <h1><%=$roman_numeral%></h1>
+      </div>
+   </div>
+   <div class='enter_num'>
+   <form action='/enter_number' method='post'>
+     <label for='number'>
+       <input type='text' name ='enter_num'>
+       <input type='submit' value='Convert another number'>
+     </label>
+   </div>
   </body>
 </html>
